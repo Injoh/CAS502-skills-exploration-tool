@@ -18,3 +18,5 @@ Integrate real-time labor market data to provide up-to-date insights on emerging
 Create an interactive map that allows users to zoom into specific regions and dynamically view the regional skill network and job types.
 Develop a reporting module that generates downloadable reports detailing skill relationships and regional workforce recommendations.
  
+Anticipated Challenges
+There are a few challenges I foresee in this project. On the technical side, handling diverse datasets—especially if the regional data or industry-specific information isn't fully available or well-structured—might require advanced data processing techniques, which could slow things down initially.
