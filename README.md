@@ -1,45 +1,25 @@
-# Skills Exploration Tools
+Project Title: Strategic Workforce Development through Skill Network Analysis and Regional Mapping
+Team Members:
+•	Injoh Tanwani (Project Lead & Data Scientist)
+•	Team member - TBD 
+Description of the Problem
+Africa faces significant challenges in aligning its growing workforce with the skill demands of various industries. With a rapidly changing economic landscape and increasing demand for skilled labor, there is a pressing need for targeted training and policy development. However, a lack of comprehensive understanding of the relationships between job-required skills and regional demands creates inefficiencies in workforce development. This project aims to bridge that gap by analyzing skill relationships across job types and mapping them to specific regions in Africa to guide strategic workforce development.
+ 
+Basic Features (Functionality)
+•	Parse and process skill data from data/Skills.xlsx, create a weighted skill network graph, and incorporate regional segmentation for mapping.
+•	Provide context and insights into regional economic conditions and labor market trends in Africa, ensuring that the data is interpreted within the correct regional frameworks.
+•	Develop an interactive skill network visualization that includes geographic overlays to map skill demand across Africa’s regions.
+•	Build a user interface that allows stakeholders to interact with the skill network, input skills for analysis, and view regional insights.
+ 
+Nice-to-Have Features (Functionality)
 
-This is a starter repository for projects in the CAS502 class in the School of Complex Adaptive Systems at Arizona State University. If you choose to use the code in this repository for your project, please clone it into your own account and work with your clone.
-
-## What the code does
-
-This script will read the skills in `data/Skills.xlsx` (which is pretty much a list of types of jobs and what skills each job requires) and create a weighted graph from it. Each skill is identified by an "Element ID" of the form `Number.Letter.Number.letter` (e.g. `2.A.1.a`). The script will create a node for each skill id and if two skills are used in the same job type, the nodes will be connected. The more often two skills are used together for a job type, the greater the weight on the edge between those two nodes. The resulting network looks something like that (darker and thicker edges have more weight):
-![Network Image](img/networkjpg.jpg)
-
-After creating the network, the script will ask the user for a skill id and then print the first 10 skills most often used with the entered skill and 5 job types in which both skills are used, e.g.
-
-```
-Often used skills with "Active Learning (2.A.2.b)":
-"Active Listening (2.A.1.b)" e.g. as Judges, Magistrate Judges, and Magistrates (5.0), Marriage and Family Therapists (4.88), Child, Family, and School Social Workers (4.88), Editors (4.88), Historians (4.75)
-...
-```
-
-## Set up
-
-To set up the project, clone the repository. You need the following packages installed:
-- pandas
-- openpyxl
-- networkx
-- matplotlib
-
-## How to run the code
-
-To execute the tool, simply run `python skills.py`. It will run for a few moments and then ask you for a skill code. You can find the codes for each skill in the file `skills-list.csv` (e.g. `2.A.1.a` for "Reading Comprehension"). Once entered, the program will present you with a list of 10 skills are that are most often used in combination with the entered skill and the top five professions in which a skill is important for.
-
-## Repository content
-
-The following files are part of this repository:
-
-- `skills.py`  
-The code for this program.
-- `skills-list.csv`  
-CSV file with a list of skills and their codes.
-- `data`  
-This folder contains a number of data files. The files have been downloaded from [O*NET Resource Center](https://www.onetcenter.org/database.html), version 29.1 ([license](https://creativecommons.org/licenses/by/4.0/)). The file currently used in the code is `Skills.xlsx`. Additionally, there are two files in this folder:
-  - `Occupation Data.xlsx`: Descriptions for each occupation.
-  - `TechnologySkills.xlsx`: A list of technological skills for each occupation.
-
-## Notes
-
-This repository is intentially left pretty barebone, so you can use it for all the assignments in CAS502.
+Implement a recommendation engine to suggest skill development courses based on skill co-occurrence data.
+Integrate real-time labor market data to provide up-to-date insights on emerging skills in high-demand sectors across African regions.
+Create an interactive map that allows users to zoom into specific regions and dynamically view the regional skill network and job types.
+Develop a reporting module that generates downloadable reports detailing skill relationships and regional workforce recommendations.
+ 
+Anticipated Challenges
+There are a few challenges I foresee in this project. On the technical side, handling diverse datasets—especially if the regional data or industry-specific information isn't fully available or well-structured—might require advanced data processing techniques, which could slow things down initially.
+ 
+Team Collaboration and Communication Plan
+To ensure effective collaboration, I anticipate we will meet on Zoom. We will meet once a week via Zoom to discuss project progress, review findings, and align on next steps. In addition, we will use Slack for day-to-day communication, sharing updates, documents, and any challenges we face. Regular check-ins and transparent communication will help us to keepi the project on track and ensure success
