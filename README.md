@@ -18,8 +18,3 @@ Integrate real-time labor market data to provide up-to-date insights on emerging
 Create an interactive map that allows users to zoom into specific regions and dynamically view the regional skill network and job types.
 Develop a reporting module that generates downloadable reports detailing skill relationships and regional workforce recommendations.
  
-Anticipated Challenges
-There are a few challenges I foresee in this project. On the technical side, handling diverse datasets—especially if the regional data or industry-specific information isn't fully available or well-structured—might require advanced data processing techniques, which could slow things down initially.
- 
-Team Collaboration and Communication Plan
-To ensure effective collaboration, I anticipate we will meet on Zoom. We will meet once a week via Zoom to discuss project progress, review findings, and align on next steps. In addition, we will use Slack for day-to-day communication, sharing updates, documents, and any challenges we face. Regular check-ins and transparent communication will help us to keepi the project on track and ensure success
