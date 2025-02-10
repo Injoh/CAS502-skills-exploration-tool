@@ -1,0 +1,3 @@
+Interactive Reporting (Nice-to-Have)
+
+Reporting Module: A module for generating downloadable reports will need a backend infrastructure that can convert dynamic visualizations and data into structured formats like PDF, Excel, or CSV. Libraries like reportlab (for PDFs) or pandas (for CSVs) can be utilized here.
