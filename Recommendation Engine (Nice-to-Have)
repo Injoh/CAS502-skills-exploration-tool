@@ -1,0 +1,4 @@
+5. Recommendation Engine (Nice-to-Have)
+
+Course Recommendation Algorithm: The recommendation engine will require data on available skill development courses across Africa. This can be achieved by analyzing the co-occurrence of skills and matching them with relevant course offerings.
+Machine Learning/AI Techniques: A basic machine learning model, such as collaborative filtering or content-based filtering, could be implemented to recommend courses based on identified skill needs.
