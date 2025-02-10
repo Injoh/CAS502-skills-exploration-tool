@@ -1,0 +1,5 @@
+1. Data Acquisition and Cleaning
+
+Skills Data: The project relies on a dataset (Skills.xlsx) containing job-related skills, which needs to be parsed and cleaned. The dataset should include both hard skills (technical) and soft skills, which will be mapped to job types and regions.
+Regional Data: Information on African regions’ economic conditions, labor market trends, and existing skills demand will be necessary. These data may need to be sourced from regional labor organizations, government reports, or other relevant institutions.
+Data Processing Tools: Python libraries like pandas for data manipulation, numpy for numerical operations, and possibly geopandas for geographic data handling will be used. 
