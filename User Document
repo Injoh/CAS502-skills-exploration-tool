@@ -2,7 +2,7 @@ How to Use the Code
 Running the Application:
 The application can be executed using the command:
 
-python main.py
+python skillNetworkCreation.py
 
 Input Parameters:
 The application accepts several command-line arguments:
@@ -10,7 +10,7 @@ The application accepts several command-line arguments:
 --config: (Optional) The path to the configuration file.
 --verbose: Enable verbose output for debugging purposes.
 
-python main.py --input data/input_file.txt --config config/settings.yaml --verbose
+python skillNetworkCreation.py --input data/input_file.txt --config config/settings.yaml --verbose
 
 Output:
 The processed results will be output to the console or saved to a specified output directory 
