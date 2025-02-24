@@ -1,0 +1,19 @@
+How to Use the Code
+Running the Application:
+The application can be executed using the command:
+
+python main.py
+
+Input Parameters:
+The application accepts several command-line arguments:
+--input: The path to the input file or directory.
+--config: (Optional) The path to the configuration file.
+--verbose: Enable verbose output for debugging purposes.
+
+python main.py --input data/input_file.txt --config config/settings.yaml --verbose
+
+Output:
+The processed results will be output to the console or saved to a specified output directory 
+(as configured in your settings). Check the documentation in the docs/ folder for detailed output formats and file structures.
+
+For more detailed usage instructions, troubleshooting tips, and examples, please refer to the Project Wiki(To be created).
