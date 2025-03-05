@@ -11,17 +11,19 @@ def parse_skill_data(file_path):
     Parse and process skill data from the provided Excel file.
     
     Expected Excel columns: 
-      - 'JobType' : The job type identifier.
-      - 'SkillID' : Unique identifier for a skill (e.g., '2.A.1.a').
+      - 'Element ID' : The job type identifier.
+      - 'Element Name' : Unique identifier for a skill (e.g., '2.A.1.a').
       - 'Region'  : (Optional) Region information associated with the job.
       
     Returns:
         A pandas DataFrame containing the skill data.
     """
     try:
-        df = pd.read_excel(file_path)
+        df = pd.read_csv(file_path)
+        print(df)
         # Validate required columns
-        required_columns = ['JobType', 'SkillID']
+        print("Columns in the file:", df.columns)
+        required_columns = ['Element ID', 'Element Name']
         for col in required_columns:
             if col not in df.columns:
                 raise ValueError(f"Missing required column: {col}")
@@ -49,18 +51,18 @@ def create_weighted_skill_graph(df):
     co_occurrence = defaultdict(int)
     
     # Group by job type to count co-occurrences
-    grouped = df.groupby('JobType')
+    grouped = df.groupby('Element ID')
     for job_type, group in grouped:
-        skills = group['SkillID'].unique()
+        skills = group['Element Name'].unique()
         for i in range(len(skills)):
             for j in range(i+1, len(skills)):
                 pair = tuple(sorted((skills[i], skills[j])))
                 co_occurrence[pair] += 1
     
     # Add nodes with optional region attribute if available
-    unique_skills = df['SkillID'].unique()
+    unique_skills = df['Element Name'].unique()
     for skill in unique_skills:
-        regions = df[df['SkillID'] == skill]['Region'].unique() if 'Region' in df.columns else None
+        regions = df[df['Element Name'] == skill]['Region'].unique() if 'Region' in df.columns else None
         G.add_node(skill, region=regions[0] if regions is not None and len(regions) > 0 else None)
     
     # Add weighted edges based on co-occurrence counts
@@ -199,7 +201,7 @@ def generate_report(G, insights, output_file):
 # -------------------------------
 def main():
     # Parse the skill data from the Excel file
-    data_file = "data/Skills.xlsx"
+    data_file = "/Users/injohtanwani/Documents/CS 502/skills-list.xlsx"
     df = parse_skill_data(data_file)
     if df is None:
         return
